@@ -25,5 +25,8 @@ public GameObject oyun_bitti;
         SceneManager.LoadScene("Scenes/SampleScene");
     }
 
-
+    public void ana_menu()
+    {
+        SceneManager.LoadScene("Scenes/ana_menu");
+    }
 }

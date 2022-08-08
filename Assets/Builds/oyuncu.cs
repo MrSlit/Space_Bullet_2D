@@ -12,12 +12,10 @@ public class oyuncu : MonoBehaviour
     public GameObject patlama;
     public GameObject namlu;
 
-    float kursun_hizi = 100.0f;
-
     float mermi = 100.0f;
     float simdiki_mermi = 100.0f;
 
-
+    float kursun_hizi = 50.0f;
 
     void mermi_azalt(float deger)
     {
@@ -41,16 +39,22 @@ public class oyuncu : MonoBehaviour
 
     void ates_et()
     {
-        GameObject yeni_kursun = Instantiate(oyuncu_kursunu, transform.position, Quaternion.identity);
-        yeni_kursun.transform.rotation = namlu.transform.rotation;
+        Vector3 SpawnPoint = namlu.transform.position;
+        Quaternion SpawnRoot = namlu.transform.rotation;
+        GameObject yeni_kursun = Instantiate(oyuncu_kursunu, SpawnPoint, SpawnRoot);
+        Rigidbody2D Run = yeni_kursun.GetComponent<Rigidbody2D>();
+        Run.AddForce(yeni_kursun.transform.forward * 2 * Time.deltaTime, ForceMode2D.Impulse);
+        yeni_kursun.transform.eulerAngles = new Vector3(90 , yeni_kursun.transform.eulerAngles.y, yeni_kursun.transform.eulerAngles.z);
+        //GameObject yeni_kursun = Instantiate(oyuncu_kursunu, transform.position, Quaternion.identity);
+        //yeni_kursun.transform.rotation = namlu.transform.rotation;
         //yeni_kursun.GetComponent<Rigidbody2D>().AddForce(Vector2.up * kursun_hizi);
-        float poz_x = transform.position.x + (namlu.transform.localRotation.z) ;
-        float poz_y = transform.position.y - (namlu.transform.localRotation.z) ;
+        //float poz_x = transform.position.x + (namlu.transform.localRotation.z) ;
+        //float poz_y = transform.position.y - (namlu.transform.localRotation.z) ;
 
         //if (poz_y < 0)  poz_y = poz_y -2 ;
-        
 
-        yeni_kursun.GetComponent<Rigidbody2D>().AddForce((new Vector2(poz_x, poz_y)) * -1 * kursun_hizi);
+
+        //yeni_kursun.GetComponent<Rigidbody2D>().AddForce((new Vector2(poz_x, poz_y)) * -1 * kursun_hizi);
         //yeni_kursun.transform.localPosition=new Vector3()
 
         Destroy(yeni_kursun, 2.0f);
