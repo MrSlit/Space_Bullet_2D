@@ -43,6 +43,8 @@ public class siradakiseviye : MonoBehaviour
         if (kalan_süre.timeValue >= 40)
         {
             star3.SetActive(true);
+            star2.SetActive(false);
+            star1.SetActive(false);
         }
 
         if (kalan_süre.timeValue < 40 && kalan_süre.timeValue >= 20)

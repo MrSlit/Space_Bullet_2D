@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class dusman : MonoBehaviour
+public class dusman1 : MonoBehaviour
 {
     public Transform oyuncu;
 
@@ -12,6 +12,7 @@ public class dusman : MonoBehaviour
     public bitis bitti;
     public siradakiseviye Siradakiseviye;
     public int Score;
+    public GameObject winpanel;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,9 +28,9 @@ public class dusman : MonoBehaviour
         Destroy(yeni_patlama, 1.0f);
         Score++;
 
-        if(Score >= 1)
+        if(Score >= 2)
         {
-            Siradakiseviye.kazanmayi_goster();
+            winpanel.SetActive(true);
         }
     }
     // Update is called once per frame

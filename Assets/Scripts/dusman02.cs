@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class dusman : MonoBehaviour
+public class dusman02 : MonoBehaviour
 {
     public Transform oyuncu;
 
@@ -12,12 +12,15 @@ public class dusman : MonoBehaviour
     public bitis bitti;
     public siradakiseviye Siradakiseviye;
     public int Score;
+    BoxCollider2D _col;
+    public GameObject kalkan;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "oyuncu_kursunu")
         {
             yok_et();
+           
         }
     }
 
@@ -31,10 +34,30 @@ public class dusman : MonoBehaviour
         {
             Siradakiseviye.kazanmayi_goster();
         }
+}
+
+    void Start()
+    {
+        _col = gameObject.GetComponent<BoxCollider2D>();
+
     }
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("space"))
+        {
+            _col.enabled = !_col.enabled;
+
+           if (kalkan.activeInHierarchy == true)
+            {
+                kalkan.SetActive(false);
+            }
+           else
+            {
+                kalkan.SetActive(true);
+            }
+        }
 
     }
 }

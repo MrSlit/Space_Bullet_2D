@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class oyuncu : MonoBehaviour
     public bitis bitti;
     public GameObject patlama;
     public GameObject namlu;
+    private int dusman_sayisi;
+    public GameObject winpanel;
 
     float mermi = 100.0f;
     float simdiki_mermi = 100.0f;
@@ -27,14 +30,15 @@ public class oyuncu : MonoBehaviour
         }
     }
 
-    void yok_ol()
+     void yok_ol()
     {
-    
         Destroy(gameObject);
         GameObject yeni_patlama = Instantiate(patlama, transform.position, Quaternion.identity);
         Destroy(yeni_patlama, 1.0f);
         bitti.paneli_goster();
     }
+
+
 
 
     void ates_et()
@@ -47,9 +51,29 @@ public class oyuncu : MonoBehaviour
 
         Destroy(yeni_kursun, 2.0f);
         mermi_azalt(20.0f);
+
     }
 
+   /* private void dusman_sayaci()
+    {
+        if (dusman_sayisi == 0)
+        {
+            winpanel.SetActive(true);
+        }
+    }
 
+    public void DestroyedOneEnemyShip()
+    {
+        dusman_sayisi = dusman_sayisi - 1;
+        dusman_sayaci();
+    }
+
+    public int GetEnemyShipCount()
+    {
+        return dusman_sayisi;
+    }
+
+    */
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

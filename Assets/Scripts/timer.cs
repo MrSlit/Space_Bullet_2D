@@ -7,7 +7,7 @@ public class timer : MonoBehaviour
 {
     public GameObject oyuncu;
     public Text timeText;
-    public float timeValue = 90;
+    public float timeValue = 60;
     public bitis bitti;
     public GameObject patlama;
 
@@ -30,12 +30,7 @@ public class timer : MonoBehaviour
     }
     void DisplayTime(float timeToDisplay)
     {
-        if(timeToDisplay < 0)
-        {
-            timeToDisplay = 0;
-        }
-
-        
+       
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timeText.text = string.Format("{00}", seconds);
