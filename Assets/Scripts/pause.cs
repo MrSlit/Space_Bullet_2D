@@ -12,7 +12,6 @@ public class pause : MonoBehaviour
     public void paneli_goster()
     {
         durdurmenu.SetActive(true);
-        pausebutton.SetActive(false);
         Invoke("durdur", 0.0f);
     }
 
@@ -38,7 +37,9 @@ public class pause : MonoBehaviour
     }
 
     public void geridon()
-    {         Time.timeScale = 1.0f;
+    {         
+        Time.timeScale = 1.0f;
+        durdurmenu.SetActive(false);
         
     }
 

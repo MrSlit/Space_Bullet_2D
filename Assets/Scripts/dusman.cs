@@ -11,12 +11,14 @@ public class dusman : MonoBehaviour
     public bitis bitti;
     public siradakiseviye Siradakiseviye;
     public int Score;
+    public AudioSource patlama_sesi;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "oyuncu_kursunu")
         {
             yok_et();
+            patlama_sesi.Play();
         }
     }
 

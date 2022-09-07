@@ -14,9 +14,11 @@ public class oyuncu : MonoBehaviour
     public GameObject namlu;
     private int dusman_sayisi;
     public GameObject winpanel;
+    public AudioSource vurus_sesi;
 
     float mermi = 100.0f;
     float simdiki_mermi = 100.0f;
+
 
     public void mermi_azalt(float deger)
     {
@@ -78,6 +80,7 @@ public class oyuncu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            vurus_sesi.Play();
             ates_et();
         }
     }
