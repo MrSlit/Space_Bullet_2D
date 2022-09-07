@@ -9,9 +9,11 @@ public class Collison : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("sds");
         if (collision.gameObject.tag == "oyuncu_gemisi")
         {
-            Destroy(gameObject);
+          
+            Destroy(collision.gameObject);
             GameObject yeni_patlama = Instantiate(patlama, transform.position, Quaternion.identity);
             Destroy(yeni_patlama, 1.0f);
             bitti.paneli_goster();

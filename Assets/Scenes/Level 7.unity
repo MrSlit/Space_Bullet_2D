@@ -418,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4167137575128871944, guid: 2fd56c6667327df4e8d5a6349807cbbf, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4167137575128871945, guid: 2fd56c6667327df4e8d5a6349807cbbf, type: 3}
       propertyPath: bitti
@@ -598,6 +598,10 @@ PrefabInstance:
       propertyPath: bitti
       value: 
       objectReference: {fileID: 1164450505}
+    - target: {fileID: 3515503430702751337, guid: dc0d4efd8bea8fa49abc3edf62bf4ae4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4716133590810273021, guid: dc0d4efd8bea8fa49abc3edf62bf4ae4, type: 3}
       propertyPath: bitti
       value: 

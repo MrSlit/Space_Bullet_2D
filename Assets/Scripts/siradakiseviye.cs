@@ -30,7 +30,7 @@ public class siradakiseviye : MonoBehaviour
     public void siradaki_seviye()
     {
         Time.timeScale = 1.0f;
-      
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ana_menu()

@@ -11,13 +11,13 @@ public class bullet : MonoBehaviour
         if (collision.gameObject.tag == "dusman_gemisi")
         {
             yok_ol(collision.gameObject);
-            siradaki.kazanmayi_goster();
+          
         }
     }
 
     void yok_ol(GameObject enemyShip){
         enemyShip.SetActive(false);
-
+       
     }
 
 

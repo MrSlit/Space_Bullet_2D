@@ -8,7 +8,6 @@ public class dusman : MonoBehaviour
     public Transform oyuncu;
 
     public GameObject patlama;
-    public GameObject dusman_kursunu;
     public bitis bitti;
     public siradakiseviye Siradakiseviye;
     public int Score;

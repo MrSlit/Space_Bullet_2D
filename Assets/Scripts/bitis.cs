@@ -22,7 +22,7 @@ public GameObject oyun_bitti;
 
     public void tekrar_oyna(){
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Scenes/SampleScene");
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     public void ana_menu()

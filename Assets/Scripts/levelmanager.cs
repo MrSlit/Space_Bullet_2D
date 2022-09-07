@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class levelmanager : MonoBehaviour
 {
 
-
+    public static int dusmanSayisi = 0;
+    Text dusman;
     public int level;
   
 
@@ -16,5 +17,14 @@ public class levelmanager : MonoBehaviour
     {
         SceneManager.LoadScene("Level " + level.ToString());
     }
- 
+
+     void Start()
+    {
+        dusman = GetComponent<Text>();
+    }
+
+     void Update()
+    {
+        //dusman.text = "Enemy Left: " + dusmanSayisi;
+    }
 }
