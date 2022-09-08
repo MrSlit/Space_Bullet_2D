@@ -662,7 +662,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4167137574628187150}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1204449958461995521, guid: 6f052a13c2a10a546a009ccacccb34ae, type: 3}
+        m_TargetAssemblyTypeName: siradakiseviye, Assembly-CSharp
+        m_MethodName: siradaki_seviye
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4167137574643291549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,8 +1124,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: bitis, Assembly-CSharp
+      - m_Target: {fileID: 1204449958461995521, guid: 6f052a13c2a10a546a009ccacccb34ae, type: 3}
+        m_TargetAssemblyTypeName: siradakiseviye, Assembly-CSharp
         m_MethodName: ana_menu
         m_Mode: 1
         m_Arguments:
@@ -1502,11 +1514,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oyuncu_kursunu: {fileID: 5560750405506147941, guid: ccfed1bbc0416a248a082e355d97f66b, type: 3}
   mermi_sayisi: {fileID: 4167137574902451313}
-  bitti: {fileID: 0}
+  bitti: {fileID: 636530270914158859, guid: e47fc539e62eace4f89f4640f5f6db6d, type: 3}
   patlama: {fileID: 7235846789540582758, guid: eba88ec6a51c918479e7690336d90b7b, type: 3}
   namlu: {fileID: 4167137574975087512}
-  winpanel: {fileID: 0}
-  vurus_sesi: {fileID: 0}
+  winpanel: {fileID: 4167137574781628075}
+  vurus_sesi: {fileID: 2253080477785788298, guid: d108b7895671beb46b854388d7deba75, type: 3}
 --- !u!95 &4167137575128871958
 Animator:
   serializedVersion: 4
@@ -2029,10 +2041,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oyuncu: {fileID: 4167137575128871949}
   patlama: {fileID: 7235846789540582758, guid: eba88ec6a51c918479e7690336d90b7b, type: 3}
-  bitti: {fileID: 0}
-  Siradakiseviye: {fileID: 0}
+  bitti: {fileID: 636530270914158859, guid: e47fc539e62eace4f89f4640f5f6db6d, type: 3}
+  Siradakiseviye: {fileID: 1204449958461995521, guid: 6f052a13c2a10a546a009ccacccb34ae, type: 3}
   Score: 0
-  patlama_sesi: {fileID: 0}
+  patlama_sesi: {fileID: 9011909140144282962, guid: d067dd878e23cdf42a1e6843dd63c5a2, type: 3}
 --- !u!114 &4167137575304995802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2040,7 +2052,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4167137575304995801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18bf8879594ec2f42930983700020330, type: 3}
   m_Name: 
@@ -2442,7 +2454,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 636530270914158859, guid: e47fc539e62eace4f89f4640f5f6db6d, type: 3}
         m_TargetAssemblyTypeName: bitis, Assembly-CSharp
         m_MethodName: tekrar_oyna
         m_Mode: 1
@@ -2576,7 +2588,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 636530270914158859, guid: e47fc539e62eace4f89f4640f5f6db6d, type: 3}
         m_TargetAssemblyTypeName: bitis, Assembly-CSharp
         m_MethodName: ana_menu
         m_Mode: 1
@@ -2730,6 +2742,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4167137575595952011}
     m_Modifications:
+    - target: {fileID: 1204037289171746996, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6469306458800175858}
+    - target: {fileID: 1204037289171746996, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 1204037290285355109, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2820,11 +2840,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
+--- !u!1 &1647780504940031437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1204037289171746998, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
+  m_PrefabInstance: {fileID: 462619700286434683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6469306458800175858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647780504940031437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8dbd7e95a0dd44fb10123e5603aaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
 --- !u!224 &1647780506041056542 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1204037290285355109, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
   m_PrefabInstance: {fileID: 462619700286434683}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1647780506041056543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1204037290285355108, guid: 58fffc82e13ecdd499a361868d545585, type: 3}
+  m_PrefabInstance: {fileID: 462619700286434683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc9d991cfabc084ba0e3a82b3a04c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5653637271141999856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2835,6 +2884,22 @@ PrefabInstance:
     - target: {fileID: 5812973443728008054, guid: adbd1130f0ae23649878cc3fdefd927e, type: 3}
       propertyPath: m_Name
       value: Sett_Button 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812973443728008056, guid: adbd1130f0ae23649878cc3fdefd927e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812973443728008056, guid: adbd1130f0ae23649878cc3fdefd927e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1647780506041056543}
+    - target: {fileID: 5812973443728008056, guid: adbd1130f0ae23649878cc3fdefd927e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: paneli_goster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812973443728008056, guid: adbd1130f0ae23649878cc3fdefd927e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: pause, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5812973443728008057, guid: adbd1130f0ae23649878cc3fdefd927e, type: 3}
       propertyPath: m_Pivot.x

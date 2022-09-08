@@ -234,7 +234,8 @@ MonoBehaviour:
   oyuncu: {fileID: 0}
   patlama: {fileID: 7235846789540582758, guid: eba88ec6a51c918479e7690336d90b7b, type: 3}
   dusman_kursunu: {fileID: 0}
-  bitti: {fileID: 0}
-  Siradakiseviye: {fileID: 0}
+  bitti: {fileID: 636530270914158859, guid: e47fc539e62eace4f89f4640f5f6db6d, type: 3}
+  Siradakiseviye: {fileID: 1204449958461995521, guid: 6f052a13c2a10a546a009ccacccb34ae, type: 3}
   Score: 0
   kalkan: {fileID: 4349968091821881564}
+  patlama_sesi: {fileID: 9011909140144282962, guid: d067dd878e23cdf42a1e6843dd63c5a2, type: 3}
