@@ -12,6 +12,7 @@ public class siradakiseviye : MonoBehaviour
     public GameObject star3;
     public timer kalan_süre;
     public GameObject holder;
+    public GameObject tamamenbitti;
 
 
     public void kazanmayi_goster()
@@ -29,8 +30,15 @@ public class siradakiseviye : MonoBehaviour
 
     public void siradaki_seviye()
     {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            tamamenbitti.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     public void ana_menu()
