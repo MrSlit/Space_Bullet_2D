@@ -6702,6 +6702,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d0b9d670c4e64bd4c9dd3d18b9b9e0d7, type: 3}
     - target: {fileID: 5836283751977732163, guid: 2cca02cac6a03e04d9c8e34c41862766, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836283751977732163, guid: 2cca02cac6a03e04d9c8e34c41862766, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1067443871}
@@ -7015,7 +7019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 5, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1336888651
@@ -9317,7 +9321,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1855513898}
   m_FillRect: {fileID: 1780002720}
   m_HandleRect: {fileID: 1855513897}
-  m_Direction: 1
+  m_Direction: 0
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
@@ -9959,7 +9963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6430fd575fda7a741ba6cd2520c6f200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
 --- !u!1001 &9200308724772766280
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,13 +14,14 @@ public class dusman02 : MonoBehaviour
     public int Score;
     BoxCollider2D _col;
     public GameObject kalkan;
+    public AudioSource patlama_sesi;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "oyuncu_kursunu")
         {
             yok_et();
-           
+            patlama_sesi.Play();
         }
     }
 
